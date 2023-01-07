@@ -1,0 +1,194 @@
+* {box-sizing: border-box}
+		.nav {
+		  width: 100%;
+		  background-color: #5588A3;
+		  overflow: auto;
+		}
+
+		.nav a {
+		  float: left;
+		  padding: 12px;
+		  color: #E8E8E8;
+		  text-decoration: none;
+		  font-size: 17px;
+		  width: 20%; 
+		  text-align: center;
+		}
+
+		.nav a:hover {
+		  background-color: #145374;
+		}
+
+		.nav a.active {
+		  background-color: #00334E;
+		}
+
+		@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+		.header {
+		  position:relative;
+		  text-align:center;
+		  background: linear-gradient(60deg, rgb(0, 51, 78) 0%, rgb(85, 136, 163) 100%);
+		  color:white;
+		  font-size: 25px;
+		  font-family: "Montserrat", sans-serif;
+		}
+
+		.inner-header {
+		  height:30vh;
+		  width:100%;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		.flex {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  text-align: center;
+		}
+
+		.waves {
+		  position:relative;
+		  width: 100%;
+		  height:15vh;
+		  margin-bottom:-7px;
+		  min-height:100px;
+		  max-height:150px;
+		}
+
+		.content {
+		  position:relative;
+		  height:20vh;
+		  text-align:center;
+		  background-color: white;
+		}
+
+		.parallax > use {
+		  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+		}
+		.parallax > use:nth-child(1) {
+		  animation-delay: -2s;
+		  animation-duration: 7s;
+		}
+		.parallax > use:nth-child(2) {
+		  animation-delay: -3s;
+		  animation-duration: 10s;
+		}
+		.parallax > use:nth-child(3) {
+		  animation-delay: -4s;
+		  animation-duration: 13s;
+		}
+		.parallax > use:nth-child(4) {
+		  animation-delay: -5s;
+		  animation-duration: 20s;
+		}
+		@keyframes move-forever {
+		  0% {
+		   transform: translate3d(-90px,0,0);
+		  }
+		  100% { 
+		    transform: translate3d(85px,0,0);
+		  }
+		}
+			.blink {
+			  animation: color-animation 4s linear infinite;
+			}
+
+			.title-word-1 {
+			  --color-1: #00334E;
+			  --color-2: #145374;
+			  --color-3: #5588A3;
+			}
+
+			.title-word-2 {
+			  --color-1: #5588A3;
+			  --color-2: #00334E;
+			  --color-3: #145374;
+			}
+
+			.title-word-3 {
+			  --color-1: #145374;
+			  --color-2: #5588A3;
+			  --color-3: #00334E;
+			}
+
+			.title-word-4 {
+			  --color-1: #00334E;
+			  --color-2: #145374;
+			  --color-3: #5588A3;
+			}
+
+			@keyframes color-animation {
+			  0%    {color: var(--color-1)}
+			  32%   {color: var(--color-1)}
+			  33%   {color: var(--color-2)}
+			  65%   {color: var(--color-2)}
+			  66%   {color: var(--color-3)}
+			  99%   {color: var(--color-3)}
+			  100%  {color: var(--color-1)}
+			}
+			.container {
+			  display: grid;
+			  place-items: center;  
+			  text-align: center;
+			  height: 20vh
+			}
+
+			.title {
+			  font-family: "Montserrat", sans-serif;
+			  font-weight: 800;
+			  font-size: 7vw;
+			  text-transform: uppercase;
+			}
+
+		.click {
+		  --b: 3px;
+		  --s: .45em;
+		  --color: #145374;
+		  
+		  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+		  color: var(--color);
+		  --_p: var(--s);
+		  background:
+		    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+		    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+		  transition: .3s linear, color 0s, background-color 0s;
+		  outline: var(--b) solid #0000;
+		  outline-offset: .6em;
+		  font-size: 16px;
+
+		  border: 0;
+
+		  user-select: none;
+		  -webkit-user-select: none;
+		  touch-action: manipulation;
+		}
+
+		.click:hover,.click:focus-visible{
+		  --_p: 0px;
+		  outline-color: var(--color);
+		  outline-offset: .05em;
+		}
+
+		.click:active {
+		  background: var(--color);
+		  color: #fff;
+		}
+
+		.container1 {
+			  display: grid;
+			  place-items: center;  
+			  text-align: center;
+			  height: 30vh
+			}
+
+		@media screen and (max-width: 500px) {
+		  .nav a {
+		    float: none;
+		    display: block;
+		    width: 100%;
+		    text-align: center;
+		  }
+		}
+		
